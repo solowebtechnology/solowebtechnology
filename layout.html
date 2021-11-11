@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+ *{
+     box-sizing: border-box;
+ }
+
+body{
+   margin: 0;
+   padding: 0;
+   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-size: 14px;
+}
+
+ h2{
+    margin-left: 100px;
+}
+
+P, h3{
+    margin: 10px;
+}
+    .container{
+     
+       /* display: grid;
+       grid-template-columns: 1fr 2.5fr 1fr;
+       grid-template-rows: auto 2.5fr auto;
+      height: 100vh; */
+     }
+ .companyName{
+     margin-top: -40px;
+     margin-left: 60px;
+ }    
+.content{
+padding: ;
+}
+
+.header{
+    background-color: pink;
+    /* grid-column: span 3;
+    */
+  overflow: hidden;
+  height: 50px;
+}
+
+.main{
+    background-color: brown;
+    float: left;
+    width: 60%;
+    height: 100vh;
+    position:relative;
+  }
+
+.sidebar{
+    background-color: blue;
+    float: right;
+    width: 20%;
+    height: 100vh;
+    position: relative;
+    overflow: auto;
+}
+
+
+    img{
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .photos img{
+    width: 80%;
+  }
+
+  .photos img:hover{
+    transform: scale(0.95);
+    transition: 0.5s ease-in-out;
+    opacity: 0.8;
+  }
+
+
+
+div.photos a{
+    margin: 10%;
+}
+    .right{
+    background-color: seagreen;
+    /* grid-row: 2/4; */
+    float: left;
+    width: 20%;
+    height: 100vh;
+    overflow: auto;
+}
+
+
+div.top-msg{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.right-content{
+    margin: 10px;
+    background-color: cornsilk;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+.right-content a{
+text-decoration: none;
+color: black;
+}
+
+div.right-content p{
+padding: 10px;
+}
+.footer{
+    background-color: coral;
+    /* grid-column: 2/4; */
+    position: absolute;
+    margin-top: 100vh;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+   
+} 
+.companyName{
+position: absolute;
+}
+
+.tabs{
+    margin-left:25% ;
+    margin-top: -20px;
+    
+   }
+
+.tabs a{
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+    color:black;
+    border-right: 1px solid black;
+    font-weight: bolder;
+}
+
+.tabs a:hover{
+color:cornsilk;
+}
+
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+#logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+
+@media screen and (max-width: 760px) {
+    .main, .sidebar, .right, .footer{
+        float: none;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin: 0;
+        position: static;
+    }
+
+.companyName{
+    position: relative;
+    margin-top: -40px;
+    margin-left: 80px;
+}
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header{
+        height: auto;
+    }
+.main{
+    order: 1;
+    height: 100vh;
+}
+
+.right{
+    order: 2;
+}
+
+.sidebar{
+    order: 3;
+}
+
+.footer{
+    order: 4;
+}
+
+.tabs{
+    margin: 0;
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition:  1s ease-in-out;
+    
+}
+.tabs a{
+    display: block;
+    border-radius: 0;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    }
+
+.tabs a:hover{
+background: rgb(119, 93, 93);
+}
+
+.tabs a:last-child{
+    border-bottom: none;
+}
+
+.tabs.active{
+display: block;
+max-height: 200px;
+}
+
+.burg-container{
+    cursor: pointer;
+   float: right;
+   margin-top: -20px;
+}
+.burger{
+    background: black;
+    height: 3px;
+    width: 25px;
+    margin: 3px;
+    
+   
+}
+
+
+}
+</style>
+
+</head>
+<body>
+  
+
+    <div class="container">
+       <div class="content header">
+       <img id="logo" src="IMG/desk.png" alt=""> 
+       <h4 class="companyName">WEB DESIGN</h4>
+        <div class="burg-container">
+       <div class="burger"></div>
+       <div class="burger"></div>
+       <div class="burger"></div>
+    </div>
+        <div class="tabs">
+        <a href="">Home</a>
+        <a href="">Work</a>
+        <a href="">Office</a>
+        <a href="">Entertainment</a>
+        <a href="">Fun</a>
+        </div>
+      </div> 
+
+      <div class="content right">
+        <h3>RIGHT SECTION</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum labore dolores vero officiis consequuntur a modi doloremque mollitia tempora repellat nisi molestiae exercitationem eligendi aut amet, vel maxime blanditiis reprehenderit.</p>
+       <div class="right-content"> <div class="top-msg">TOP MESSAGE</div>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quo aperiam ea voluptatem cumque consequatur veniam illum obcaecati animi incidunt accusantium saepe vitae qui ipsum, ratione magni odit optio eveniet.</p></div>
+       <div class="right-content"><a href=""><div class="top-msg">TOP MESSAGE</div><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quo aperiam ea voluptatem cumque consequatur veniam illum obcaecati animi incidunt accusantium saepe vitae qui ipsum, ratione magni odit optio eveniet.</p></a></div>
+
+       <div class="right-content"><div class="top-msg">TOP MESSAGE</div><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quo aperiam ea voluptatem cumque consequatur veniam illum obcaecati animi incidunt accusantium saepe vitae qui ipsum, ratione magni odit optio eveniet.</p></div>
+    </div>  
+           <div class="content main">
+               <h3>MAIN SECTION</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum labore dolores vero officiis consequuntur a modi doloremque mollitia tempora repellat nisi molestiae exercitationem eligendi aut amet, vel maxime blanditiis reprehenderit.</p>
+           
+           </div> 
+    
+           <div class="content sidebar">
+            <h3>SIDEBAR SECTION</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum labore dolores vero officiis consequuntur a modi doloremque mollitia tempora repellat nisi molestiae exercitationem eligendi aut amet, vel maxime blanditiis reprehenderit.</p>
+            <div class="photos">
+            <a href=""><img src="IMG/desk.png" alt="PHOTO"></a>
+            <a href=""><img src="IMG/nature.jpg" alt="PHOTO"></a>
+            <a href=""><img src="IMG/pic1.jpg" alt="PHOTO"></a>
+            <a href=""><img src="IMG/pic2.jpg" alt="PHOTO"></a>
+            </div>
+        </div> 
+
+           
+      <div class="content footer">
+        <p>FOOTER SECTION Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+       
+       </div> 
+
+    </div>
+
+<script>
+let burger = document.querySelector(".burg-container");
+let tab = document.querySelector(".tabs");
+
+burger.addEventListener("click", ()=>{
+tab.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
